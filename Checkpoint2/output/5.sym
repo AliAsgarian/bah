@@ -1,0 +1,17 @@
+Entering the global scope:
+    Entering the scope for function function1:
+        a: int[]
+        truthVal: bool
+        y: int
+    Leaving the function scope
+    Entering the scope for function main:
+        Entering a new block:
+        Leaving the block
+        i: int
+        flag: bool
+        temp: int
+    Leaving the function scope
+    x: int[10]
+    function1: (int[]) -> int
+    main: (void) -> void
+Leaving the global scope

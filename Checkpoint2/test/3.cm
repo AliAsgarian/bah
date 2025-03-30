@@ -1,0 +1,20 @@
+/* 
+ 1. Line 16 produces an incompatible types error by trying to divide int by bool
+ 2. Line 16 produces an incompatible types error by trying to assign void to int (its assigning void because the division failed)
+ 3. Line 17 produces an invalid array index error for passing in a void value
+ */
+
+void output(int a);
+void voidFunc(void);
+
+void main(void) {
+  int x;  
+  int fac;
+  int y[10];
+  bool test;
+
+  x = 2;
+  x = output(x / test);
+  y[voidFunc()] = 2;
+  
+}

@@ -1,0 +1,31 @@
+/*
+ 1. Line 12 produces an error for invalid variable declaration. It will change `void y` to `int y` and recover
+ 2. Line 14 produces a mismatch return type error because it tries to return a bool instead of an int
+ 3. Line 24 produces an error because function2() was never declared
+ 4. Line 29 produces an invalid callExp, because a bool is being passed when it expected int[]
+ */
+
+int x[10];
+
+int function1(int a[]) {
+  bool truthVal;
+  void y;
+
+  return truthVal;
+}
+
+void main(void) {
+  int i;
+  bool flag;
+  int temp;
+
+  i = 0;
+  while (i < flag) {
+    x[i] = function2();
+    i = i + 1;
+  }
+
+  temp = function1(x);
+  temp = function1(flag);
+
+}

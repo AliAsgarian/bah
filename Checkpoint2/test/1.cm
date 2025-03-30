@@ -1,0 +1,15 @@
+/*
+  A program to compute the factorial of an integer.
+*/
+void main(int n) {
+  int x;
+  int result;
+
+  result = 1;
+  while (n > 1) {
+    int temp;
+    temp = result;
+    result = temp * n;
+    n = n - 1;
+  }
+}

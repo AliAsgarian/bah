@@ -1,0 +1,11 @@
+/*
+ 1. Line 9 produces an undefined function error, since function() was never declared
+ 2. Line 10 should produce an invalid assign expression because of incompatible types (trying to assign an int to a bool variable)
+ */
+
+void main(void) {
+  int x;
+  bool truthVal;
+  x = function();
+  truthVal = 22;
+}

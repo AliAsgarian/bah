@@ -1,0 +1,13 @@
+/*
+  1. Line 7 tries to declare "count" when its already been declared.
+  2. Line 11 tries to refer to "x" when it's never been declared.
+*/
+void main(void) {
+  int count;
+  int count;
+  int values[10];
+  bool flag;
+
+  count = x + 2;
+
+}

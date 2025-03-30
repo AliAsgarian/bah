@@ -1,0 +1,16 @@
+Entering the global scope:
+    Entering the scope for function output:
+        a: int
+    Leaving the function scope
+    Entering the scope for function voidFunc:
+    Leaving the function scope
+    Entering the scope for function main:
+        x: int
+        fac: int
+        y: int[10]
+        test: bool
+    Leaving the function scope
+    output: (int) -> void
+    voidFunc: (void) -> void
+    main: (void) -> void
+Leaving the global scope

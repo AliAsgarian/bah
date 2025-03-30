@@ -1,0 +1,19 @@
+/*
+  1. Line 12 and 16 produce an undefined function error since scan() and print() are not declared.
+  2. Line 14 produces an invalid assignment error due to incompatible types.
+*/
+void main(void) {
+  int count;
+  int values[20];
+  bool flag;
+  bool check;
+
+  count = scan(); /* Undefined function */
+  flag = (count > 3); /* Ensuring `flag` is properly assigned a boolean value */
+
+  while ((count > 1) || (flag && check)) { /* Fixed condition */
+    count = count - 2;
+  }
+
+  print(values); /* Undefined function */
+}

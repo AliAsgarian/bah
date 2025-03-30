@@ -1,0 +1,15 @@
+The abstract syntax tree is:
+FunctionDec:
+    NameTy: void
+    CompoundExp: 
+                AssignExp:
+            VarExp:
+                SimpleVar: x
+            IntExp: 10
+        AssignExp:
+            VarExp:
+                SimpleVar: y
+            OpExp: * 
+                VarExp:
+                    SimpleVar: x
+                IntExp: 2

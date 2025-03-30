@@ -1,0 +1,7 @@
+Entering the global scope:
+    Entering the scope for function main:
+        x: int
+        truthVal: bool
+    Leaving the function scope
+    main: (void) -> void
+Leaving the global scope

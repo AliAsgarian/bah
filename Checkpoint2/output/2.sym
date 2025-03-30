@@ -1,0 +1,8 @@
+Entering the global scope:
+    Entering the scope for function main:
+        count: int
+        values: int[10]
+        flag: bool
+    Leaving the function scope
+    main: (void) -> void
+Leaving the global scope

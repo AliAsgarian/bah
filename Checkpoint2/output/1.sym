@@ -1,0 +1,11 @@
+Entering the global scope:
+    Entering the scope for function main:
+        Entering a new block:
+            temp: int
+        Leaving the block
+        n: int
+        x: int
+        result: int
+    Leaving the function scope
+    main: (int) -> void
+Leaving the global scope
