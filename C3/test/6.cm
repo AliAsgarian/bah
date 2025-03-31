@@ -1,0 +1,24 @@
+/* 
+ 1. Line 13 should produce a variable redeclaration error, using line 9
+ 2. Line 16 should produce an undefined variable error
+ */
+
+int input(void);
+void output(int a);
+
+void main(void) {
+  int x; 
+  int fac;
+  bool test;
+  bool test;
+
+  x = input();
+  fac = 2 + (x + h);
+  test = x > 1;
+  while (test) {
+    fac = fac * x;
+    x = x - 1;
+    test = x > 1;
+  }
+  output((fac + x)/2);
+}

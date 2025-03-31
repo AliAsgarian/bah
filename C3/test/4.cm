@@ -1,0 +1,17 @@
+/* This should throw a lexical error on line 5 because `in t x;` is not a valid type specifier. It'll also produce a syntactic error on line 14, since a variable cannot be declared after a statement list */
+
+void main(void) {
+  int x;
+  in t x;
+  int fac;
+
+  x = input();
+  fac = 1;
+  while (x > 1) {
+    fac = fac * x;
+    x = x - 1;
+  } 
+  int x;
+
+  output(fac);
+}

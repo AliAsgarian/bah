@@ -1,0 +1,16 @@
+/* This should throw a syntactic error on line 4 because you can't declare and initialize a variable on the same line. Also line 5 produces a lexical error for '!' */
+
+void main(void) {
+  int x = 4;
+  ! 
+  int fac;
+
+  x = input();
+  fac = 1;
+  while (x > 1) {
+    fac = fac * x;
+    x = x - 1;
+  } 
+
+  output(fac);
+}

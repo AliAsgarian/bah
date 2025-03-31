@@ -1,0 +1,25 @@
+/* This should throw a lexical error on line 6 because ! is an invalid variable name. It should also throw a syntactic error for line 7 invalid syntax. Line 8 is also invalid because you can't declare and initialize on the same line. Line 9 contains an invalid conditional statement. Line 19 has a while statement with an invalid conditional expression */
+
+int main(void) {
+  int x; 
+  int fac;
+  int !;
+  int x = ;
+  int x = 5;
+  while ( 3 + 5 / *) {
+
+  }
+
+  if(void){
+    x = 4;
+  }
+
+  x = input();
+  fac = 1;
+  while (!=1) {
+    fac = fac * x;
+    x = x - 1;
+  } 
+
+  output(fac);
+}

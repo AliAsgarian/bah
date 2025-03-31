@@ -1,0 +1,17 @@
+int foo(void) {
+    int i;
+    i = 5;
+
+    return i;
+}
+
+void main(void) {
+  int x; int fac;
+
+  fac = 1;
+
+  while (x > 1) {
+    fac = fac * x + 1;
+    x = x - 1;
+  }
+}

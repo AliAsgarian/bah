@@ -1,0 +1,63 @@
+/*
+ 1. Line 15 produces an error for invalid variable declaration. It will instead change `void t` to `int t`
+ 2. Line 28 produces a mismatch return type error
+ 3. Line 52 and 60, function declaration for input() and output() missing
+ 4. Line 56 produces an invalid callExp, makes use of bool when it expected int[]
+ */
+
+int x[10];
+
+int minloc(int a[], int low, int high) {
+  int i; 
+  int x; 
+  int k;
+  bool y;
+  void t;
+
+  k = t + 1;
+  k = low;
+  x = a[low];
+  i = low + 1;
+  while (i < high) {
+    if (a[i] < x) {
+       x = a[i];
+       k = i; 
+    }
+    i = i + 1;
+  } 
+  return y;
+}
+
+void sort(int a[], int low, int high) {
+  int i; 
+  int k;
+
+  i = low;
+  while (i < high - 1) {
+    int t;
+    k = minloc(a, i, high);
+    t = a[k];
+    a[k] = a[i];
+    a[i] = t;
+    i = i + 1;
+  }
+}
+
+void main(void) {
+  int i;
+  bool q;
+
+  i = 0;
+  while (i < 10) {
+    x[i] = input();
+    i = i + 1;
+  }
+
+  sort(q, 0, 10);
+
+  i = 0;
+  while (i < 10) {
+    output(x[i]);
+    i = i + 1;
+  }
+}

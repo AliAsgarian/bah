@@ -1,0 +1,24 @@
+/* 
+ 1. Line 22 produces an invalid array index error for passing in a void CallExp foo() as the array index
+ 2. Line 23 produces an incompatible types error in the CallExp 
+ */
+
+int input(void);
+void output(int a);
+void foo(void);
+
+int gcd(int u, int v) {
+  if (v == 0) return u;
+  else return gcd(v, u - u/u*v);
+}
+
+void main(void) {
+  int x;  
+  int fac;
+  int y[10];
+  bool test;
+
+  x = input();
+  y[foo()] = 2;
+  output((fac + x)/test);
+}
