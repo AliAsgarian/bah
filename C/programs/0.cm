@@ -1,0 +1,28 @@
+/*
+  Created by: Matt Breckon and Dean Way
+  File name: 0.cm
+  Generic testing file for editing.
+*/
+int r;
+int s;
+
+int foo(void){
+    return 5;
+}
+
+void bar(void){
+    int x;
+    x = 5;
+    r = 25;
+    if (r == 25) {
+        int x;
+        x = 2;
+        output(foo() + x);
+    } else {
+        output(r);
+    }
+}
+
+void main(void) {
+  bar();
+}

@@ -1,0 +1,19 @@
+/*
+  Created by: Matt Breckon and Dean Way
+  File name: 5.cm
+  Sample program designed to be completely broken.
+*/
+
+int x;
+x = a;
+void a = x;
+
+void function() {
+  return return;
+};
+
+int void main(void array[]) {
+  int array[0;];
+  main();
+  return function(x);
+}

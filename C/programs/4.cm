@@ -1,0 +1,17 @@
+/*
+  Created by: Matt Breckon and Dean Way
+  File name: 4.cm
+  Sample program creates int array and adds integers together.
+*/
+
+
+void foo(int a[]) {
+  a[12] = 44;
+}
+
+void main (void) {
+  int a[25];
+  a[12] = 21;
+  foo(a);
+  output(a);
+}

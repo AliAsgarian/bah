@@ -1,0 +1,27 @@
+/*
+  Source: Fei Song
+  File name: 8.cm
+  Second program modified from checkpoint 2's marking scheme.
+*/
+
+void foo(void) {
+  int x;
+}
+
+int bar(int a[]) {
+  a[0] = 2;
+}
+
+int baz(int y) {
+  y = 2;
+}
+
+void main(void) {
+  int x;
+  int a[10];
+  x = foo();
+  x = foo(x);
+  x = bar(a);
+  x = baz(x);
+  x = x + a;
+}
