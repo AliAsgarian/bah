@@ -75,15 +75,20 @@ public class CodeGenerator implements AbsynVisitor {
             return;
         }
         
-        // Generate finale
-        emitRM("ST", FP, globalOffset + OFP_OFFSET, FP, "push ofp");
-        emitRM("LDA", FP, globalOffset, FP, "push frame");
-        emitRM("LDA", AC, 1, PC, "load ac with ret ptr");
-        emitRM_Abs("LDA", PC, mainEntry, "jump to main loc");
-        emitRM("LD", FP, OFP_OFFSET, FP, "pop frame");
-        
-        emitComment("End of execution.");
-        emitRO("HALT", 0, 0, 0, "");
+        // Check if main was defined
+    if (mainEntry == -1) {
+        System.err.println("Error: 'main' function not found");
+        return;
+    }
+    
+    // Generate finale
+    emitRM("ST", FP, globalOffset + OFP_OFFSET, FP, "push ofp");
+    emitRM("LDA", FP, globalOffset, FP, "push frame");
+    emitRM("LDA", AC, 1, PC, "load ac with ret ptr");
+    emitRM_Abs("LDA", PC, mainEntry, "jump to main loc");
+    
+    emitComment("End of execution.");
+    emitRO("HALT", 0, 0, 0, "");
     }
 
     public void visit(ArrayDec dec, int offset, boolean isAddr) {
@@ -256,8 +261,15 @@ public class CodeGenerator implements AbsynVisitor {
             dec.body.accept(this, offset, false);
         }
         
-        // Default return for void functions
-        emitRM("LD", PC, RET_OFFSET, FP, "return to caller");
+        // Special handling for different function types
+        if (dec.func.equals("main")) {
+            // Directly halt for main function
+            emitRO("HALT", 0, 0, 0, "halt for main function");
+        } else {
+            // For non-main functions that return a value
+            // Ensure return value is in AC
+            emitRM("LD", PC, RET_OFFSET, FP, "return to caller");
+        }
         
         // Backpatch jump around function
         int savedLoc = emitLoc;
@@ -454,8 +466,14 @@ public class CodeGenerator implements AbsynVisitor {
             expr.exp.accept(this, offset, false);
         }
         
-        // Return to caller
-        emitRM("LD", PC, RET_OFFSET, FP, "return to caller");
+        // Special handling for main function
+        if (currentFunction.equals("main")) {
+            // Directly jump to HALT instruction
+            emitRM_Abs("LDA", PC, emitLoc + 2, "jump to HALT for main");
+        } else {
+            // Normal return for other functions
+            emitRM("LD", PC, RET_OFFSET, FP, "return to caller");
+        }
         
         emitComment("<- return");
     }
